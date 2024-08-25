@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Text related css properties */
+h1 {
+    color: rgb(74, 124, 124);
+    background-color: black;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+
+}
+
+/* some properties which helps us to create ractangular shapes */
+#boxOne{
+    height: 150px;
+    width: 150px;
+    background-color:antiquewhite;
+    margin: 20px;
+    padding:30px;
+}
+
+#boxTwo {
+    height: 150px;
+    width: 150px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* we can center the element in the div using this method */
+h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#boxThree {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(178, 178, 236);
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#child1 {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(211, 106, 106);
+    /* position: absolute;
+    left: 0px; */
+}
+#child2 {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(135, 230, 202);
+    /* position: absolute;
+    left: 150px; */
+}
+#child3 {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(185, 188, 198);
+    /* position: absolute;
+    left: 300px; */
+}
+

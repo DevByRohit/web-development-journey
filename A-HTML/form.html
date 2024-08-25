@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Form</title>
+  </head>
+  <body>
+    <form action="post">
+      <fieldset>
+        <legend>Some Form Element</legend>
+        <!-- The value of label attribute "for" should be equal to the value of input attribute "id" for link both element-->
+        <label for="email">Enter Email ID : </label>
+        <input type="email" id="email" placeholder="Enter email id" />
+
+        <br />
+        <br />
+
+        <label for="password">Enter Password : </label>
+        <input type="password" id="password" placeholder="Enter password" />
+
+        <br />
+        <br />
+
+        <input type="submit" value="Submit" />
+
+        <!-- Some element which exists in form element -->
+
+        <br />
+        <br />
+
+        <!-- 1. -->
+        <label for="datepicker">Enter date of birth : </label>
+
+        <!-- 2. -->
+        <input type="date" id="datepicker" />
+
+        <br />
+        <br />
+
+        <!-- 3. -->
+        <select name="fruits" id="selector1" multiple>
+          <!-- 4. -->
+          <option value="mango">Mango</option>
+          <option value="orange">Orange</option>
+          <option value="banana">Banana</option>
+          <option value="grapes">Grapes</option>
+          <option value="pineapple">Pineapple</option>
+        </select>
+
+        <br />
+        <br />
+
+        <!-- 5. -->
+        <button>Click Here</button>
+
+        <br />
+        <br />
+
+        <!-- 6. -->
+        <textarea
+          name="textArea"
+          id="textArea"
+          cols="30"
+          rows="10"
+          placeholder="Enter your feedback"
+        ></textarea>
+      </fieldset>
+    </form>
+  </body>
+</html>
