@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 15px;
+        background-color: #c4a7a7;
+      }
+      #threeBtn {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #storeData {
+        background-color: rgb(53, 255, 114);
+        padding: 12px 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: medium;
+        border: 1px solid black;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 3px 5px rgb(77, 77, 77);
+      }
+      #retrieveData {
+        background-color: rgb(70, 169, 255);
+        padding: 12px 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: medium;
+        border: 1px solid black;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 3px 5px rgb(77, 77, 77);
+      }
+      #clearData {
+        background-color: rgb(255, 67, 67);
+        padding: 12px 50px;
+        margin: 10px;
+        text-align: center;
+        font-size: medium;
+        border: 1px solid black;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 3px 5px rgb(77, 77, 77);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Local Storage Example</h1>
+    <div id="threeBtn">
+      <button id="storeData">Store Data From localStorage</button>
+      <button id="retrieveData">Retrieve Data From localStorage</button>
+      <button id="clearData">Clear Data From localStorage</button>
+    </div>
+
+    <script>
+      const studentData = {
+        personalDetails: {
+          firstName: "Rohit",
+          lastName: "Ahirwar",
+          phone: 7701963945,
+          email: "rohitverma@gmail.com",
+          branch: "Computer Science",
+          section: "A",
+          age: 22,
+          gender: "Male",
+          dateOfBirth: "12/07/2000",
+        },
+        courses: ["Web Developer", "Data Science", "Machine Learning"],
+        address: {
+          houseNumber: "A-2261",
+          area: "Holambi Kalan Metro Vihar",
+          city: "New Delhi",
+          state: "Delhi",
+          pincode: 110082,
+        },
+      };
+
+      JSON.stringify()
+
+      document.getElementById("storeData").addEventListener("click", () => {
+        localStorage.setItem("studentData", JSON.stringify(studentData));
+        alert("Data stored successfully in localStorage!");
+      });
+
+      document.getElementById("retrieveData").addEventListener("click", () => {
+        const retrievedData = JSON.parse(localStorage.getItem("studentData"));
+        if (retrievedData) {
+          alert(`Retrieved data: ${JSON.stringify(retrievedData, null, 2)}`);
+          console.log(retrievedData);
+        } else {
+          alert("No data found in localStorage!");
+        }
+      });
+
+      document.getElementById("clearData").addEventListener("click", () => {
+        localStorage.removeItem("studentData");
+        alert("Data cleared successfully from localStorage!");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Learning</title>
+  </head>
+  <body>
+    <ul class="parent-ul-list">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    function createList(item) {
+      let newList = document.createElement("li");
+      let addText = document.createTextNode(`${item}`);
+      newList.appendChild(addText);
+      let parentUl = document.querySelector(".parent-ul-list");
+      parentUl.appendChild(newList);
+    }
+    createList("Python");
+    createList("Java");
+    createList("Java");
+    createList("Python");
+
+    // edit list item
+    let editItem = document.querySelector("li:nth-child(2)");
+    let newItem = document.createElement("li");
+    newItem.appendChild(document.createTextNode("SQL"));
+    editItem.replaceWith(newItem);
+
+    // edit list item again
+    let editItemTwo = document.querySelector("li:nth-child(3)");
+    // editItemTwo.textContent = "TypeScript";
+    // editItemTwo.innerHTML = "TypeScript";
+    // editItemTwo.outerHTML = "<li>TypeScript</li>"
+    let newItemTwo = document.createElement("li");
+    newItemTwo.appendChild(document.createTextNode("TypeScript"));
+    editItemTwo.replaceWith(newItemTwo);
+
+    // edit list item again
+    let editItemThree = document.querySelector("li:first-child");
+    editItemThree.outerHTML = "<li>TypeScript</li>";
+
+    // remove list item
+    let removeItem = document.querySelector("li:last-child");
+    removeItem.remove();
+
+    
+  </script>
+</html>

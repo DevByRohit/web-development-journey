@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Document Object Model</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1 id="heading" class="test">DOM Manupulation</h1>
+      <h2 class="First-h2">First H2</h2>
+      <h2 id="Second-h2">Second H2</h2>
+      <h2 class="Third-h2">Third H2</h2>
+      <h2 class="Forth-h2">Forth H2</h2>
+      <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+      <input type="password" name="" id="" placeholder="Enter your name" />
+      <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // let head = document.getElementById("heading");
+    // console.log(head.id);
+    // console.log(head.className);
+    // console.log(head.getAttribute("class"));
+    // console.log(head.getAttribute("id"));
+    // console.log(head.setAttribute("id", "test"));
+
+    // It returns only visible text
+    // console.log(head.innerText);
+
+    // but it return whole content
+    // console.log(head.textContent);
+
+    // console.log(head.innerHTML);
+    // head.style.backgroundColor = "yellow";
+    // head.style.padding = "10px"
+    // head.style.borderRadius = "10px";
+
+    // let holdDiv = document.querySelector(".title");
+    // holdDiv.style.backgroundColor = "green";
+    // holdDiv.style.padding = "15px";
+    // holdDiv.style.borderRadius = "15px";
+
+    let h2ByTag = document.querySelector("h2");
+    // console.log(h2ByTag);
+
+    let h2ByClass = document.querySelector(".First-h2");
+    // console.log(h2ByClass);
+
+    let h2ById = document.querySelector("#Second-h2");
+    // console.log(h2ById);
+
+    let inputTag = document.querySelector("input[type='password']");
+    // console.log(inputTag);
+    inputTag.style.padding = "10px 50px 10px 50px";
+    inputTag.style.border = "1.5px solid black";
+    inputTag.style.borderRadius = "10px";
+
+    let ulTag = document.querySelector("ul");
+    let liTags = ulTag.querySelector("li");
+    liTags.style.backgroundColor = "green";
+    liTags.style.padding = "7px";
+    liTags.style.borderRadius = "8px";
+
+    // select all li tags by using querySelectorAll()
+    let allLiTags = document.querySelectorAll("li");
+    // allLiTags.forEach((liTag) => {
+    //   liTag.style.padding = "5px";
+    //   liTag.style.margin = "5px";
+    //   liTag.style.borderRadius = "5px";
+    //   liTag.style.backgroundColor = "green";
+    //   liTag.style.color = "black";
+    // });
+
+    // select second li tag by using index
+    // console.log(allLiTags[3]);
+    // change color of second li tag to gray
+    // allLiTags[1].style.backgroundColor = "gray";
+    // allLiTags[1].style.padding = "7px";
+    // allLiTags[1].style.borderRadius = "8px";
+
+    // select all h2 tags by using querySelectorAll()
+    let allH2Tags = document.querySelectorAll("h2");
+    // allH2Tags[0].style.backgroundColor = "green";
+    // allH2Tags[1].style.backgroundColor = "green";
+    // allH2Tags[2].style.backgroundColor = "green";
+    // allH2Tags[3].style.backgroundColor = "green";
+    allH2Tags.forEach(function (h2Tag) {
+      h2Tag.style.backgroundColor = "green";
+      h2Tag.style.padding = "7px";
+      h2Tag.style.borderRadius = "8px";
+    });
+  </script>
+</html>

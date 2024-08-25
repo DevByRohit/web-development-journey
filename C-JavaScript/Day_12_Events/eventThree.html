@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Learning</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Baloo Bhai 2", sans-serif;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      #aboutTopic {
+        text-align: center;
+      }
+      #discription {
+        padding: 0px 20px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        /* text-align: justify; */
+        letter-spacing: 0.05em;
+      }
+      #showWorking {
+        display: inline;
+        text-align: center;
+        padding: 2px 20px;
+        border-radius: 10px;
+        background-color: #f6ff52;
+        border: 1px solid black;
+      }
+
+      #buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+      #btns {
+        padding: 10px 25px;
+        font-size: medium;
+        font-weight: 600;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid black;
+      }
+
+      button:hover {
+        background-color: #dfbfff;
+        transition: background-color 0.5s linear;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="aboutTopic">
+      <h1>About setInterval()</h1>
+      <p id="discription">
+        The setInterval() method in JavaScript is used to call a function or
+        execute a code snippet repeatedly at specified intervals. It returns an
+        interval ID that can be used to cancel the interval later on.
+      </p>
+      <h2 id="showWorking">
+        Below small project which is showing setInterval() function working
+      </h2>
+      <div id="buttons">
+        <button id="btns" class="firstBtn">Start</button>
+        <button id="btns" class="secondBtn">Stop</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let btnOne = document.querySelector(".firstBtn");
+    let btnTwo = document.querySelector(".secondBtn");
+
+    // function random(number) {
+    //   return Math.floor(Math.random() * (number + 1));
+    // }
+
+    // function changeBackgroundColour() {
+    //   let randomColor = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    //   document.body.style.backgroundColor = randomColor;
+    // }
+
+    // btnOne.addEventListener("click", () => {
+    //   var intervalId = setInterval(changeBackgroundColour, 1000);
+    //   stopBgc(intervalId);
+    // });
+
+    // function stopBgc(intervalId) {
+    //   btnTwo.addEventListener("click", () => {
+    //     clearInterval(intervalId);
+    //     console.log("stop change background colour");
+    //   });
+    // }
+
+    // we can also create random colour in hex code
+    let cancelIntervalId;
+
+    let randomColor = function () {
+      let hex = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+
+    btnOne.addEventListener("click", () => {
+      if (cancelIntervalId == null) {
+        cancelIntervalId = setInterval(changeBgcColor, 1000);
+        console.log('executed');
+        
+      }
+      function changeBgcColor() {
+        document.body.style.backgroundColor = randomColor();
+      }
+    });
+
+    btnTwo.addEventListener("click", () => {
+      clearInterval(cancelIntervalId);
+      cancelIntervalId = null;
+      console.log("stop change background colour");
+    });
+  </script>
+</html>
