@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(174, 234, 174);
+}
+
+#panel {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+#top-panel {
+    padding: 0px 25%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    background-color: #4bba6b;
+}
+
+.box {
+    background-color: white;
+    color: rgb(13, 118, 13);
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 3px 15px;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#botom-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 8px;
+    height: calc(100% - 90px);
+}
+
+.bubble {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(8, 100, 8);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.bubble:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 0.6px solid black;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+#popupWindow {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #98ffb4;
+    border: 1px solid rgb(0, 0, 0);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Baloo Bhai 2", sans-serif;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      #project-no {
+        font-weight: 800;
+        background-color: rgb(234, 211, 255);
+        border: 1px solid black;
+        color: rgb(61, 61, 61);
+        border-radius: 15px;
+      }
+
+      #title {
+        display: block;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 900;
+        padding: 20px;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        width: 100%;
+      }
+      #circalOne {
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgb(145, 145, 145);
+        border: 1px solid rgb(0, 0, 0);
+      }
+      #circalTwo {
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgb(248, 255, 36);
+        border: 1px solid rgb(0, 0, 0);
+      }
+      #circalThree {
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgba(39, 255, 89, 0.609);
+        border: 1px solid rgb(0, 0, 0);
+      }
+      #circalFour {
+        height: 100px;
+        width: 100px;
+        margin: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgb(111, 219, 255);
+        border: 1px solid rgb(0, 0, 0);
+      }
+      #instruction {
+        display: block;
+        text-align: center;
+      }
+      #reset {
+        margin-top: 20px;
+        padding: 2px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: 600;
+      }
+    </style>
+    <title>Background Changer</title>
+  </head>
+  <body>
+    <div id="title">
+      <h1 id="project-no">Project One</h1>
+      <h1>Background Changer</h1>
+    </div>
+
+    <div id="container">
+      <div id="circalOne" class="button"></div>
+      <div id="circalTwo" class="button"></div>
+      <div id="circalThree" class="button"></div>
+      <div id="circalFour" class="button"></div>
+    </div>
+
+    <div id="instruction">
+      <h2>Try clicking on one of the colours above</h2>
+      <h2>To change the background colour of this page</h2>
+      <button id="reset">Reset</button>
+    </div>
+  </body>
+  <script>
+    let btns = document.querySelectorAll(".button");
+    let body = document.querySelector("body");
+    let resetBtn = document.querySelector("#reset");
+
+    btns.forEach((button) => {
+      button.addEventListener("click", (elem) => {
+        let value = elem.target.id;
+        switch (value) {
+          case "circalOne":
+            body.style.backgroundColor = "rgb(145, 145, 145)";
+            body.style.transition = "linear 0.5s";
+            break;
+          case "circalTwo":
+            body.style.backgroundColor = "rgb(248, 255, 36)";
+            body.style.transition = "linear 0.5s";
+            break;
+          case "circalThree":
+            body.style.backgroundColor = "rgba(39, 255, 89, 0.609)";
+            body.style.transition = "linear 0.5s";
+            break;
+          case "circalFour":
+            body.style.backgroundColor = "rgb(111, 219, 255)";
+            body.style.transition = "linear 0.5s";
+            break;
+        }
+      });
+    });
+    resetBtn.addEventListener("click", (elem) => {
+      if (elem.target.id === "reset") {
+        body.style.backgroundColor = "white";
+      }
+    });
+  </script>
+</html>
