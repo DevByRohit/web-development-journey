@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Learning</title>
+  </head>
+  <body>
+    <!-- Github Copilet extension -->
+  </body>
+  <script>
+    let requestUrl = "https://api.github.com/users/hiteshchoudhary";
+    let xmlRequest = new XMLHttpRequest();
+    xmlRequest.open("GET", requestUrl, true);
+    xmlRequest.onreadystatechange = function () {
+      console.log(xmlRequest.readyState);
+      if (xmlRequest.readyState === 4) {
+        let ownerData = JSON.parse(this.responseText);
+        console.log(ownerData.followers);
+      }
+    };
+    xmlRequest.send();
+  </script>
+</html>
