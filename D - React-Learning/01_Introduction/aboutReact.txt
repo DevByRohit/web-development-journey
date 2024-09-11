@@ -1,0 +1,33 @@
+Q. What is React?
+1. JavaScript library to build Dynamic and interactive user Interface.
+2. Developed at Facebook in 2021.
+3. Currently most widely used JavaScript library for frontend development.
+4. Used to create Single Page Application (SPA).
+
+Q. Working of DOM?
+1. Browser takes HTML and creates DOM.
+2. JavaScript helps us modify the DOM based on user actions or events.
+3. In big Application, Working with DOM becomes complicated.
+
+Q. Problems with JavaScript?
+1. React has a simpler mental model.
+2. JavaScript is cumbersome.
+3. JavaScript is error-prone.
+4. JavaScript is hard to maintain.
+
+Q. Working of React?
+1. No need to worry about querying and uploading DOM.
+2. React creates a web page with small and reusable components.
+3. React will take care of creating and uoloading DOM elements.
+4. It saves a lot of time, cheezein aasan hai, pehle sai assan hai.
+
+Q. JavaScript vs React
+1. JavaScript imperative: You define steps to reach your desire states.
+2. React is Declarative: You define the target UI and then react figure out how to reach that state.
+
+Q. Create React Application
+1. Official tool is CRA (Create React APP).
+2. Vite is a modern tool to create React Project.
+3. Vite produces quick and small bundle size.
+4. Vite: Use "npm run dev" to launch dev server.
+5. Use npm start for CRA.
