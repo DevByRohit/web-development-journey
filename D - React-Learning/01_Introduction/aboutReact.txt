@@ -31,3 +31,24 @@ Q. Create React Application
 3. Vite produces quick and small bundle size.
 4. Vite: Use "npm run dev" to launch dev server.
 5. Use npm start for CRA.
+
+# Project Structure Of React
+1. node_modules:- Has all the install node packages.
+2. public/Directory:- Contains static files that don not change.
+3. src/Directory:- Main folder for the React code.
+  a) components:-  Reusable parts of the UI, like buttons or hearders.
+  b) assets:- Images, fonts, and other static files.
+  c) styles:- CSS or stylesheets.
+4. package.json:- contains information about this project like name, version, dependencies on ther react packages.
+5. vite.config.js:- contains vite config.
+
+# File Extensions
+.js
+  a) Stands for JavaScript files
+  b) Contains regular JavaScript code
+  c) Used for jeneral logic and components
+.jsx
+  a) Stands for JavaScript XML
+  b) Contains JavaScript with HTML-like tags.
+  c) Makes it easier to design UI components.
+
