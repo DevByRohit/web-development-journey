@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  text-align: center;
+}
+
+button {
+  padding: 6px 20px;
+  margin: 10px;
+  font-size: medium;
+  border: 1.5px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(201, 255, 120);
+}
+
+h1 {
+  padding: 10px;
+  background-color: rgb(189, 255, 46);
+}
+
+h2 {
+  margin: 15px;
+}

@@ -52,3 +52,8 @@ Q. Create React Application
   b) Contains JavaScript with HTML-like tags.
   c) Makes it easier to design UI components.
 
+Q. What is JSX?
+1. Definition:- jsx determines how the UI will look wherever the components are used.
+2. Not HTML:- Thought it resembles HTML, you are actually writing jsx, which stands for JavaScript XML.
+3. Conversion:- jsx gets converted to regular JavaScript.
+4. Babeljs.io/repl is a tool that allows you to see how jsx is transformed into JavaScript.
