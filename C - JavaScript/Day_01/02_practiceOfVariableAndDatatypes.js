@@ -4,6 +4,7 @@
 var firstName = "Rohit";
 let lastName = "Ahirwar";
 const fixedValue = 10621434;
+
 //  Primitive types
 let numberDataType = 2231;
 let stringDataType = "String Data Type";
