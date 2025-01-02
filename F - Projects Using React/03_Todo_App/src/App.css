@@ -1,0 +1,56 @@
+h1 {
+  padding: 15px;
+  font-weight: bolder;
+}
+
+.text-left {
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+.col-2 {
+  /* border: 2px solid black; */
+  display: flex;
+}
+
+#task-area {
+  padding: 9px 50px;
+  margin: 10px 0px;
+  font-size: large;
+  border-radius: 5px;
+  background-color: rgb(255, 225, 225);
+  border: 1.5px solid black;
+  outline: none;
+}
+
+#date-picker {
+  padding: 9px 10px;
+  margin: 10px 0px;
+  font-size: large;
+  border-radius: 5px;
+  background-color: rgb(255, 225, 225);
+  border: 1.5px solid black;
+  outline: none;
+}
+
+#todo-name {
+  font-weight: 500;
+  font-size: large;
+  padding-top: 15px;
+}
+
+#todo-date {
+  font-weight: 500;
+  font-size: large;
+  padding-top: 15px;
+}
+
+#add-btn {
+  margin: 10px;
+  padding: 9px 21px;
+}
+
+#dlt-btn {
+  margin: 10px;
+  padding: 9px 12px;
+}
