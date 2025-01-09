@@ -1,0 +1,20 @@
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnCss {
+  height: 45px;
+  width: 45px;
+  margin: 3px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  border: 1px solid rgb(74, 74, 74);
+  cursor: pointer;
+}
+
+.symbolsStyle {
+  font-size: medium;
+  font-weight: bold;
+}
