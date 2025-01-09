@@ -9,7 +9,7 @@ h1 {
 }
 
 .col-2 {
-  /* border: 2px solid black; */
+  /* border: 2px solid rgb(255, 0, 0); */
   display: flex;
 }
 
@@ -43,6 +43,7 @@ h1 {
   font-weight: 500;
   font-size: large;
   padding-top: 15px;
+  /* border: 2px solid black; */
 }
 
 #add-btn {

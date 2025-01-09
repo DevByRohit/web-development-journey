@@ -1,0 +1,19 @@
+.kg-items {
+  background-color: rgb(165, 255, 165);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.kg-span {
+  font-size: larger;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(188, 188, 188);
+  border-radius: 5px;
+  padding: 5px;
+}

@@ -1,15 +1,25 @@
+import styles from "./AddTodo.module.css";
+
 function AddTodo() {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-4 text-left">
-          <input type="text" placeholder="Enter Todo Here" id="task-area"/>
+    <div className={styles["container"]}>
+      <div className={styles["row"]}>
+        <div className="col-4 text-left">
+          <input
+            type="text"
+            placeholder="Enter Todo Here"
+            id={styles["task-area"]}
+          />
         </div>
-        <div class="col-4">
-          <input type="date" id="date-picker"/>
+        <div className="col-4">
+          <input type="date" id={styles["date-picker"]} />
         </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-outline-success" id="add-btn">
+        <div className="col-2">
+          <button
+            type="button"
+            className="btn btn-outline-success"
+            id={styles["add-btn"]}
+          >
             ADD
           </button>
         </div>
