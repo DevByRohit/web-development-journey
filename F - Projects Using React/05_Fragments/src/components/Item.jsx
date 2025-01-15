@@ -8,7 +8,7 @@ let Item = (props) => {
       <li className={`${styles["kg-items"]}`}>
         <span className={styles["kg-span"]}>{foodItem}</span>
       </li>
-      {/* both syntax are write */}
+      {/* both syntax are right */}
     </>
   );
 };
