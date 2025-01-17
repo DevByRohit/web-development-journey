@@ -1,37 +1,29 @@
-// import Buttons from "./components/Buttons";
 import CalculationTextArea from "./components/CalculationTextArea";
 import ButtonContainer from "./components/ButtonContainer";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  let symbols = [
-    "AC",
-    "%",
-    "X",
-    "D",
-    7,
-    8,
-    9,
-    "*",
-    4,
-    5,
-    6,
-    "-",
-    1,
-    2,
-    3,
-    "+",
-    "00",
-    0,
-    ".",
-    "=",
-  ];
+  let [calValue, setCalValue] = useState("");
+  const onButtonClick = (buttonText) => {
+    if (buttonText === "AC") {
+      setCalValue("");
+    } else if (buttonText === "=") {
+      // Perform calculation here
+      let result = eval(calValue);
+      setCalValue(result);
+    } else {
+      let newValue = calValue + buttonText;
+      setCalValue(newValue);
+    }
+  };
+
   return (
     <>
       <h1 className="projectName">Calculator Using React</h1>
       <div className="container">
-        <CalculationTextArea></CalculationTextArea>
-        <ButtonContainer symbolsArr={symbols}></ButtonContainer>
+        <CalculationTextArea displayValue={calValue}></CalculationTextArea>
+        <ButtonContainer onButtonClick={onButtonClick}></ButtonContainer>
       </div>
     </>
   );

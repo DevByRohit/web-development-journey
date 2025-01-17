@@ -1,7 +1,9 @@
 import styles from "./CalculationTextArea.module.css";
 
-function CalculationTextArea() {
-  return <input className={styles.display} type="text"></input>;
+function CalculationTextArea({ displayValue }) {
+  return (
+    <input className={styles.display} value={displayValue} readOnly></input>
+  );
 }
 
 export default CalculationTextArea;
