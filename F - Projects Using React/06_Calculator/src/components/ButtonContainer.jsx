@@ -26,7 +26,6 @@ const ButtonContainer = ({ onButtonClick }) => {
     ".",
     "=",
   ];
-
   return (
     <div className={styles.btnContainer}>
       <Buttons symbolsArr={calSymbols} onButtonClick={onButtonClick}></Buttons>

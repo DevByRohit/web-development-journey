@@ -1,0 +1,28 @@
+.container {
+  /* border: 2px solid black; */
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#todo-name {
+  font-weight: 500;
+  font-size: large;
+  padding-top: 15px;
+}
+
+#todo-date {
+  font-weight: 500;
+  font-size: large;
+  padding-top: 15px;
+  /* border: 2px solid black; */
+}
+
+#dlt-btn {
+  margin: 10px;
+  padding: 9px 12px;
+  border: 1.5px solid red;
+}

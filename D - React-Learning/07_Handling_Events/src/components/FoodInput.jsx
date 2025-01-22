@@ -4,7 +4,7 @@ const FoodInput = ({ handleKeyDown }) => {
     <input
       type="text"
       className={styles.inputArea}
-      placeholder="Enter food item here"
+      placeholder="Enter food items here"
       // onChange={(event) => {
       //   return console.log(event.target.value);
       // }}

@@ -23,7 +23,7 @@ function App() {
   //   setToShow(event.target.value);
   // };
 
-  const onKeyDown = (event) => {
+  const onKeyDown = (event) => { 
     if (event.key === "Enter") {
       let newFoodItem = event.target.value;
       event.target.value = "";
